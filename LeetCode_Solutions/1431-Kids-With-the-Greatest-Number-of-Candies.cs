@@ -5,8 +5,9 @@ public partial class Solution {
         var result = new bool[candies.Length];
 
         for (var i = 0; i < candies.Length; i++) {
-            if (candies[i] + extraCandies >= candies.Max())
+            if (candies[i] + extraCandies >= candies.Max()) {
                 result[i] = true;
+            }
         }
 
         return result;
