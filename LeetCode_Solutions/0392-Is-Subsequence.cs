@@ -1,6 +1,21 @@
 namespace LeetCode_Solutions;
 
 public partial class Solution {
+    public bool IsSubsequence_WithTwoPointers(string s, string t) {
+        var sIndex = 0;
+        var tIndex = 0;
+
+        while (sIndex < s.Length && tIndex < t.Length) {
+            if (s[sIndex] == t[tIndex]) {
+                sIndex++;
+            }
+
+            tIndex++;
+        }
+
+        return sIndex == s.Length;
+    }
+
     public bool IsSubsequence_WithIndexIterating(string s, string t) {
         var index = 0;
 
